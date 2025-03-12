@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { IoCopyOutline } from 'react-icons/io5'
 
 // Also install this npm i --save-dev @types/react-lottie
@@ -12,7 +12,9 @@ import GridGlobe from './GridGlobe'
 import animationData from '@/data/confetti.json'
 import MagicButton from './MagicButton'
 import { leftLists, rightLists } from '@/data'
+import dynamic from 'next/dynamic'
 
+const Lottie = dynamic(() => import('react-lottie'), { ssr: false })
 export const BentoGrid = ({
   className,
   children,
@@ -54,6 +56,11 @@ export const BentoGridItem = ({
   spareImg?: string
 }) => {
   const [copied, setCopied] = useState(false)
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
 
   const defaultOptions = {
     loop: copied,
