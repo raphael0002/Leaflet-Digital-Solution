@@ -11,7 +11,10 @@
   "dependencies": {
     "@react-three/drei": "^10.0.4",
     "@react-three/fiber": "^9.0.0-alpha.8",
+    "@sentry/nextjs": "^9.5.0",
+    "@tabler/icons-react": "^3.31.0",
     "clsx": "^2.1.1",
+    "framer-motion": "^12.5.0",
     "mini-svg-data-uri": "^1.4.4",
     "motion": "^12.0.5",
     "next": "15.1.6",
