@@ -6,7 +6,7 @@ import MagicButton from './ui/MagicButton'
 
 const Hero = () => {
   return (
-    <div className='pb-20 pt-48' id='home'>
+    <div className='pb-20 pt-20 md:pt-36'>
       {/**
        *  UI: Spotlights
        *  Link: https://ui.aceternity.com/components/spotlight
